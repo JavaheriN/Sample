@@ -16,6 +16,26 @@
         <module>dal-api</module>
         <module>dal-impl</module>
     </modules>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot-starter.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>org.springframework.boot</artifactId>
+                    <groupId>spring-boot-starter-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
+
+    </dependencies>
+</dependencyManagement>
+
+    <properties>
+        <spring-boot-starter.version>2.1.8.RELEASE</spring-boot-starter.version>
+    </properties>
 
 </project>
